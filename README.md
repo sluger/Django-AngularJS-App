@@ -18,8 +18,6 @@ This is a simple project based on [Django](https://www.djangoproject.com/) and [
 
     nodeenv -p
 
-    source nenv/bin/activate
-
     cd formsettutorial/node/formsetproject
 
     npm install -g bower
