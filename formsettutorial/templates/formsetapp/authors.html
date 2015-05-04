@@ -1,0 +1,30 @@
+{% load static %}
+{% load staticfiles %}
+
+<!doctype html>
+<html ng-app="authorsApp">
+
+{% block head_html %}
+<link rel="stylesheet" href="{% static "bootstrap/dist/css/bootstrap.css" %}" />
+{% endblock %}
+
+<body>
+  <h1>Authors
+    <button class="btn btn-default" onClick="location.href='{% url "create_author" %}'">New</button>
+    <button class="btn btn-default pull-right" onClick="location.href='{% url "index" %}'">Home</button>
+  </h1>
+
+  {% block content %}
+  <div ng-controller="AuthorsCtrl">
+    <div authors-data></div>{% csrf_token %}
+  </div>
+  {% endblock %}
+
+  {% block script %}
+  <script src="{% static "angular/angular.js" %}"></script>
+  <script src="{% static "angular-resource/angular-resource.js" %}"></script>
+  <script src="{% static "js/authors.js" %}"></script>
+  {% endblock %}
+
+</body>
+</html>

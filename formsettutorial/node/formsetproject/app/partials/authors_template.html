@@ -1,0 +1,23 @@
+<div ng-controller="AuthorsCtrl">
+  <table border="1" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Author</th>
+        <th>Resource uri</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="a in authorlist">
+        <td>{{a.id}}</td>
+        <td>{{a.name}}</td>
+        <td>{{a.resource_uri}}</td>
+        <td>
+          <button class="btn btn-default" ng-click="edit(a.id);">Details</button>
+          <button class="btn btn-default" ng-click="delete(a.id);">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

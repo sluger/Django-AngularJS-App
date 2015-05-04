@@ -1,0 +1,27 @@
+{% load static %}
+{% load staticfiles %}
+
+<!doctype html>
+<html ng-app="bookApp">
+
+{% block head_html %}
+<link rel="stylesheet" href="{% static "bootstrap/dist/css/bootstrap.css" %}" />
+{% endblock %}
+
+<body>
+  <h1>Add a Book</h1>
+
+  {% block content %}
+  <div ng-controller="NewBookCtrl">
+    <div book-data></div>
+  </div>
+  {% endblock %}
+
+  {% block script %}
+  <script src="{% static "angular/angular.js" %}"></script>
+  <script src="{% static "angular-resource/angular-resource.js" %}"></script>
+  <script src="{% static "js/book.js" %}"></script>
+  {% endblock %}
+
+</body>
+</html>

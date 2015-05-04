@@ -1,0 +1,23 @@
+<div ng-controller="BooksCtrl">
+  <table border="1" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Book</th>
+        <th>Resource uri</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="b in booklist">
+        <td>{{b.id}}</td>
+        <td>{{b.title}}</td>
+        <td>{{b.resource_uri}}</td>
+        <td>
+          <button class="btn btn-default" ng-click="edit(b.id);">Details</button>
+          <button class="btn btn-default" ng-click="delete(b.id);">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

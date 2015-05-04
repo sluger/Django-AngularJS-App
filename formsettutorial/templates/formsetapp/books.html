@@ -1,0 +1,30 @@
+{% load static %}
+{% load staticfiles %}
+
+<!doctype html>
+<html ng-app="booksApp">
+
+{% block head_html %}
+<link rel="stylesheet" href="{% static "bootstrap/dist/css/bootstrap.css" %}" />
+{% endblock %}
+
+<body>
+  <h1>Books
+    <button class="btn btn-default" onClick="location.href='{% url "create_book" %}'">New</button>
+    <button class="btn btn-default pull-right" onClick="location.href='{% url "index" %}'">Home</button>
+  </h1>
+
+  {% block content %}
+  <div ng-controller="BooksCtrl">
+    <div books-data></div>
+  </div>
+  {% endblock %}
+
+  {% block script %}
+  <script src="{% static "angular/angular.js" %}"></script>
+  <script src="{% static "angular-resource/angular-resource.js" %}"></script>
+  <script src="{% static "js/books.js" %}"></script>
+  {% endblock %}
+
+</body>
+</html>

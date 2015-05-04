@@ -1,0 +1,31 @@
+{% load static %}
+{% load staticfiles %}
+
+<!doctype html>
+<html ng-app="authorApp">
+
+{% block head_html %}
+<link rel="stylesheet" href="{% static "bootstrap/dist/css/bootstrap.css" %}" />
+{% endblock %}
+
+<body>
+  <h1>Author Details
+    <button class="btn btn-default" onClick="location.href='{% url "authors" %}'">Back</button>
+    <button class="btn btn-default pull-right" onClick="location.href='{% url "index" %}'">Home</button>
+  </h1>
+
+  {% block content %}
+  <div ng-controller="AuthorBooksEditCtrl">
+    <div authorbooks-data></div>
+  </div>
+  {% endblock %}
+
+  {% block script %}
+  <script src="{% static "angular/angular.js" %}"></script>
+  <script src="{% static "angular-resource/angular-resource.js" %}"></script>
+  <script src="{% static "js/helpers.js" %}"></script>
+  <script src="{% static "js/author.js" %}"></script>
+  {% endblock %}
+
+</body>
+</html>

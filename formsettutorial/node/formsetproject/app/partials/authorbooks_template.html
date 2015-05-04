@@ -1,0 +1,27 @@
+<div ng-controller="AuthorBooksEditCtrl">
+  <table border="1" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Author</th>
+        <th>Resource uri</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-value="author">
+        <td><input class="form-control" ng-model="author.id" disabled></td>
+        <td><input class="form-control" ng-model="author.name"></td>
+        <td><input class="form-control" ng-model="author.resource_uri" disabled></td>
+        <td><button class="btn btn-default" ng-click="saveAuthor();">Save</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>Assign books</h2>
+  <form>
+    <select multiple ng-model="authorbooks" size=15>
+      <option ng-repeat="b in allbooks" value="{{b.resource_uri}}">{{b.title}}</option>
+    </select>
+    <button class="btn btn-default" ng-click="saveAuthorBooks();">Submit</button>
+  </form>
+</div>

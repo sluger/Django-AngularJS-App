@@ -1,0 +1,26 @@
+{% load static %}
+{% load staticfiles %}
+
+<!doctype html>
+<html ng-app="authorApp">
+
+{% block head_html %}
+<link rel="stylesheet" href="{% static "bootstrap/dist/css/bootstrap.css" %}" />
+{% endblock %}
+
+<body>
+  <h1>Add an Author</h1>
+  {% block content %}
+  <div ng-controller="NewAuthorCtrl">
+    <div author-data></div>
+  </div>
+  {% endblock %}
+
+  {% block script %}
+  <script src="{% static "angular/angular.js" %}"></script>
+  <script src="{% static "angular-resource/angular-resource.js" %}"></script>
+  <script src="{% static "js/author.js" %}"></script>
+  {% endblock %}
+
+</body>
+</html>
