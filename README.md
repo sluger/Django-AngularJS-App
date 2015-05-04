@@ -6,8 +6,9 @@ This is a simple project based on [Django](https://www.djangoproject.com/) and [
 ----------
 
 **Global Requirements**
-virtualenv ~1.11.16
-python ~2.7
+
+    virtualenv ~1.11.16
+    python ~2.7
 
 ----------
 **Deployment**
