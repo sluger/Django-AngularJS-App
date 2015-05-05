@@ -10,7 +10,7 @@ __pycache__/
 env/
 build/
 develop-eggs/
-#dist/
+dist/
 downloads/
 eggs/
 .eggs/
@@ -55,3 +55,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# bower
+bower_components/
