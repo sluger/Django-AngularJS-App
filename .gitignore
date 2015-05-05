@@ -58,3 +58,6 @@ target/
 
 # bower
 bower_components/
+
+# sqlite
+*.sqlite3

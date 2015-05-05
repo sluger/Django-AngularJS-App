@@ -1,7 +1,8 @@
-# Restful-Django-Angular-Tutorial
+# Restful Django Angular Tutorial
 
 **Description**
-This is a simple project based on [Django](https://www.djangoproject.com/) and [AngularJS](https://angularjs.org/) using [Tastypie](http://tastypieapi.org/) to separate client and server side. Initially this project focused on Django only (e.g. Inline formsets) and was later expanded through Tastypie and AngularJS to provide a decoupled client side via restful API.
+
+This is a simple project based on [Django](https://www.djangoproject.com/) and [AngularJS](https://angularjs.org/) using [Tastypie](http://tastypieapi.org/) to separate client and server side. Initially this project focused on a serverside only implementation (e.g. Django inline formsets - hence the formset naming) and was then expanded through Tastypie and AngularJS to add a decoupled client side via restful API. The data held is of 'Authors' and 'Books', where multiple Authors may have written multiple books and vice versa.
 
 **Global Requirements**
 
